@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 全场优惠 */
+
+.view {
+    padding: 0 0.24rem;
+}
+
+.cart {
+    .cart_title {
+        display: flex;
+        font-size: 0.28rem;
+        padding: 0.26rem 0;
+        line-height: 1;
+        justify-content: space-between;
+        span:nth-child(2) {
+            color: #888888;
+        }
+    }
+    .cart_content {
+        border-radius: .15rem;
+        overflow: hidden;
+        box-shadow: 0 0 12px 1px #808080;
+        .cart_main {
+            overflow: hidden;
+            padding: 0 0.3rem;
+            background-color: #55bc75;
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url("../images/sale.png");
+                width: 1.46rem;
+                height: 1.46rem;
+                background-size: 1.46rem 1.46rem;
+                position: absolute;
+                top: -.2rem;
+                right: -0.06rem;
+            }
+            .cart_name1 {
+                color: #fff;
+                line-height: 1;
+                font-size: 0.46rem;
+                padding-top: .34rem;
+            }
+            .cart_name2 {
+                line-height: 0;
+                color: #bdf3ce;
+                font-size: .24rem;
+                padding-top: 0.17rem;
+            }
+            .cart_name3 {
+                color: #fff;
+                font-size: .22rem;
+                padding-top: .63rem;
+                padding-bottom: .34rem;
+                >a {
+                    font-size: .22rem;
+                    float: right;
+                    background-color: #2a603b;
+                    color: #bdf3ce;
+                    border-radius: .05rem;
+                    padding: 0 0.03rem;
+                }
+            }
+        } // 工具栏
+        .cart_tool {
+            background-color: #fff;
+            display: flex;
+            position: relative;
+            padding: 0.16rem 0;
+            &::before {
+                content: "";
+                background-image: url("../images/icon.png");
+                position: absolute;
+                top: -0.08rem;
+                left: 0;
+                width: 100%;
+                height: .08rem;
+                background-size: .24rem .08rem;
+            }
+            >a {
+                text-align: center;
+                font-size: .26rem;
+                flex: 1;
+                color: #888888;
+                span {
+                    color: #55bc75;
+                    vertical-align: middle;
+                }
+            }
+            >a:nth-child(1) {
+                border-right: 1px solid #000;
+            }
+        }
+    }
+}
+
+// 紫色的优惠卷
+.coupon {
+    .cart_content {
+        .cart_main {
+            background-color: #a974bc;
+            .cart_name1 {
+                font-family: "STXihei";
+               .rmb{
+                    font-size: .4rem;
+                }
+               .big_num{
+                    font-size: .9rem;
+                }
+               .sm_font{
+                    font-size: .24rem;
+                    color: #eac7f7;
+                }
+            }
+            .cart_name2{
+                color: #fff;
+                padding-top: .55rem;
+                font-size: .22rem;
+            }
+          .cart_name3 {
+                padding-top:.1rem;
+                >a {
+                    background-color: #6a4279;
+                }
+            }
+        }
+    }
+    .own_tool {
+        margin-top: .28rem;
+        .cart_tool{
+            >a {
+                span {
+                    color: #6a4279;
+                }
+            }
+            >a:nth-child(2) {
+                border-right: 1px solid #000;
+            }
+        }
+    }
+}
+
+.add_coupon {
+    padding: 0.4rem 0;
+    border: 3px dashed #dedede;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 0.28rem;
+    color: #aeaeae;
+    a {
+        line-height: 1;
+    }
+    p {
+        font-size: .26rem;
+    }
+}
+
+.view {
+    padding-bottom: 50px;
+}
+
+pre {
+    font-size: 16px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/icomoon.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <img src="./images/toolbar.png" alt="">
+    <!-- 内容 -->
+    <div class="view">
+        <!-- 全场优惠 -->
+        <div class="cart">
+            <!-- 标题 -->
+            <div class="cart_title">
+                <span>全场优惠</span>
+                <span>1/1</span>
+            </div>
+            <!-- 绿色的优惠卷 -->
+            <div class="cart_content">
+                <!-- 卡片的内容 -->
+                <div class="cart_main">
+                    <div class="cart_name1">全场满300减10</div>
+                    <div class="cart_name2">双十一特价优惠全场满就减</div>
+                    <div class="cart_name3">
+                        <span class="icon-time"></span>14-11-12 20:12 至 14-11-12 23:12
+                        <a href="javascript:;">即将开始</a>
+                    </div>
+                </div>
+                <!-- 工具栏 -->
+                <div class="cart_tool">
+                    <a href="javascript:;">
+                        <span class="icon-edit"></span>
+                        编辑
+                    </a>
+                    <a href="javascript:;">
+                        <span class="icon-share"></span>
+                        分享
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cart coupon">
+            <!-- 标题 -->
+            <div class="cart_title">
+                <span>优惠券</span>
+                <span>2/3</span>
+            </div>
+            <!-- 紫色的优惠卷 -->
+            <div class="cart_content">
+                <!-- 卡片的内容 -->
+                <div class="cart_main">
+                    <div class="cart_name1">
+                        <span class="rmb">￥</span>
+                        <span class="big_num">5</span>
+                        <span class="sm_font">(满0.00可用)</span>
+                    </div>
+                    <div class="cart_name2">已领取/已使用：12/22 发行总数：1230
+                    </div>
+                    <div class="cart_name3">
+                        <span class="icon-time"></span>14-11-12 至 14-11-12
+                        <a href="javascript:;">已领取完</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 紫色的优惠卷 带工具栏-->
+            <div class="cart_content own_tool">
+                <!-- 卡片的内容 -->
+                <div class="cart_main">
+                    <div class="cart_name1">
+                        <span class="rmb">￥</span>
+                        <span class="big_num">20</span>
+                        <span class="sm_font">(满500.00可用)</span>
+                    </div>
+                    <div class="cart_name2">已领取/已使用：12/22 发行总数：1230</div>
+                    <div class="cart_name3">
+                        <span class="icon-time"></span>14-11-12 至 14-11-12
+                        <a href="javascript:;">正在进行</a>
+                    </div>
+                </div>
+                <!-- 工具栏 -->
+                <div class="cart_tool">
+                    <a href="javascript:;">
+                        <span class="icon-delete"></span>
+                        作废
+                    </a>
+                    <a href="javascript:;">
+                        <span class="icon-preview"></span>
+                        预览
+                    </a>
+                    <a href="javascript:;">
+                        <span class="icon-share"></span>
+                        分享
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="add_coupon">
+            <a href="javascript:;">
+                <span class="icon-add"></span>
+            </a>
+            <p>添加优惠卷</p>
+        </div>
+    </div>
+</body>
+<script>
+    onload = function () {
+        setHTML();
+        //为了再pc端更好的去挑食
+        onresize = function () {
+            setHTML();
+        }
+
+        function setHTML() {
+            //基础值
+            var baseVal = 100;
+            //设计搞的宽度
+            var pageWidth = 640;
+            //要适配的屏幕的宽度
+            var screenWidth = document.querySelector("html").offsetWidth;
+            //要设置的fonsize
+            var fontsize = screenWidth * baseVal / pageWidth;
+            //设置到html 标签的
+            document.querySelector("html").style.fontSize = fontsize + "px";
+        }
+    }
+</script>
+
+</html>
